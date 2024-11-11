@@ -1,0 +1,31 @@
+cabal-version:      3.4
+name:               haskell-lecture2
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             danielambda
+maintainer:         daniel.gevorgyan25@gmail.com
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:
+        Lib,
+        Ex1,
+        Ex2,
+        Ex3,
+        Ex4,
+        Ex5,
+        Ex6,
+        Ex7,
+        Ex8,
+        Ex9,
+        Ex10,
+    build-depends:
+        base ^>=4.18.2.1,
+        QuickCheck ^>=2.15.0.1,
+    hs-source-dirs:   src
+    default-language: GHC2021
