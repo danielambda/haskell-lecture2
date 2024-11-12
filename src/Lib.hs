@@ -1,5 +1,6 @@
 module Lib where
 
+import Ex0
 import Ex1
 import Ex2
 import Ex3
