@@ -29,3 +29,10 @@ quickCheck prop1
 ```
 - varying the number after the prop to check the matching Exercise
 - it is a good practice to try running the test multiple times
+
+## Exercise 0
+- run try to quickCheck the prop0 to surely check if the testing system is working properly:
+```
+cabal repl --build-depends QuickCheck
+quickCheck prop0
+```
