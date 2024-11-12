@@ -10,3 +10,6 @@ import Ex7
 import Ex8
 import Ex9
 import Ex10
+import Ex11
+import Ex12
+import Ex13

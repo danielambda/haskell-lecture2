@@ -1,8 +1,6 @@
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
 module Ex10 where
 
-import Prelude hiding (reverse)
-
 prop10 xs = all (`elem` prefixes xs) [take i xs | i <- [1..(length (xs :: [Int]))]]
 
 -- This is the function to implement

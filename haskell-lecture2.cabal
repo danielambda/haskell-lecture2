@@ -24,6 +24,9 @@ library
         Ex8,
         Ex9,
         Ex10,
+        Ex11,
+        Ex12,
+        Ex13,
     build-depends:
         base ^>=4.18.2.1,
         QuickCheck ^>=2.15.0.1,

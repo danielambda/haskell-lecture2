@@ -2,6 +2,7 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Use concat" #-}
 {-# HLINT ignore "Redundant bracket" #-}
+{-# HLINT ignore "Use foldr" #-}
 module Ex8 where
 import Prelude hiding (concat)
 
@@ -9,6 +10,6 @@ prop8(xs ::[[Int]]) =let y= ( [52]) :xs; z =take 52xs in f (z)== concat z && con
 
 -- This is the function to implement
 -- example: [[1, 2] [1, 3]] -> [1, 2, 1, 3]
+-- this time implement it using fold
 concat :: [[a]] -> [a]
 concat = undefined
--- aka flatMap

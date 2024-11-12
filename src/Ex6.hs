@@ -3,11 +3,11 @@
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
 {-# HLINT ignore "Use product" #-}
 module Ex6 where
-import Prelude hiding (foldr)
+import Prelude hiding (foldl)
 
-prop6 xs = foldr (+) 0 (xs :: [Int]) == sum xs && foldr (*) 1 xs == product xs
+prop6 xs = foldl (+) 0 (xs :: [Int]) == sum xs && foldl (*) 1 xs == product xs
 
 -- This is the function to implement
 -- idk how to explain it in a couple of words, so let me use the whiteboard
-foldr :: (a -> b -> b) -> b -> [a] -> b
-foldr f acc (x:xs) = undefined
+foldl :: (b -> a -> b) -> b -> [a] -> b
+foldl f acc (x:xs) = undefined

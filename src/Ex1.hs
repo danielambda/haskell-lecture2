@@ -1,13 +1,9 @@
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Use notElem" #-}
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
-
 module Ex1 where
 
-import Prelude hiding (elem, notElem)
-
-prop1 xs = foldl (\a (x :: Int) -> a && elem x xs) True xs && length xs <= 1 || any (<=1) xs || not (sum xs `elem` xs || product xs `elem` xs)
+prop1 a b | (a::Int) < b = isAsc [a..b] && not (isAsc [b,(b - 1)..a]) | b < a = isAsc [b..a] && not (isAsc [a,(a - 1)..b]) | otherwise = True
 
 -- This is the function to implement
-elem :: (Eq a) => a -> [a] -> Bool
-elem = undefined
+-- it shoud check if the list is strictly ascending
+isAsc :: Ord a => [a] -> Bool
+isAsc = undefined
